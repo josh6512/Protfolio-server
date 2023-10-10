@@ -20,11 +20,12 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://graceful-florentine-3aaca2.netlify.app');
-    // Add other necessary headers like 'Access-Control-Allow-Methods', 'Access-Control-Allow-Headers', etc.
+    res.header('Access-Control-Allow-Origin', 'https://main--graceful-florentine-3aaca2.netlify.app');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
   });
-
+  
 // Handle form submission
 app.post("/", async(req, res) => {
 
